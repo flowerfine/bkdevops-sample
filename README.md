@@ -45,6 +45,7 @@
   * `starter-schedule` 目前只提供了 mongodb 实现。必须用 mongodb
   * 数据源配置。`bkdevops-schedule-server` 是在 `MongoConfig` 里面配置的，在配置文件中配置的 `spring.data.mongodb` 不生效
 * 前端页面。
-  * `devops-schedule-server` 包内包含了前端项目，并且在 [ScheduleServerWebUiConfigurer](https://github.com/bkdevops-projects/devops-framework/blob/master/devops-boot-project/devops-boot-core/devops-schedule/devops-schedule-server/src/main/kotlin/com/tencent/devops/schedule/config/ScheduleServerWebUiConfigurer.kt) 中配置了路由。demo 中没有搞定这个，所以前端项目仍然是另外启动的
+  * demo 中没有搞定这个，所以前端项目仍然是另外启动的。`devops-schedule-server` 包内包含了前端项目，并且在 [ScheduleServerWebUiConfigurer](https://github.com/bkdevops-projects/devops-framework/blob/master/devops-boot-project/devops-boot-core/devops-schedule/devops-schedule-server/src/main/kotlin/com/tencent/devops/schedule/config/ScheduleServerWebUiConfigurer.kt) 中配置了路由。而且也有 swagger ui，同样是无法访问
+  * 从 `http://localhost:8082/actuator/mappings` 查看到是有 ui 的路由的，但是实际不生效
 * 注册方式。
   * [boot-schedule-worker-cloud-sample](https://github.com/bkdevops-projects/devops-framework/tree/master/devops-boot-sample/boot-schedule-worker-cloud-sample) 注册方式采用 `DISCOVERY`，demo 项目使用 `AUTO`，配置略有不同
